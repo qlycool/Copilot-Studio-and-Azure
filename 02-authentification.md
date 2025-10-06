@@ -1,0 +1,49 @@
+# Labs 2: Authentication
+
+## Objectives
+
+- Exercise: Agent authentication  
+   - Task 1: Configure agent authentication
+
+
+
+## Contents
+
+In this lab, you will perform the actions necessary for building an agent with Copilot Studio for using in the rest of labs.
+
+
+
+## Prerequisites
+
+- It's required to have completed **[Lab 0 - Create an agent](./00-create-an-agent.md)** to follow this part.
+
+
+
+## Estimated Completion Time
+
+- 30 minutes
+
+
+
+## Exercise 1: Create an agent in Copilot Studio**
+
+## Exercise 3: Agent authentication
+
+### Task 1: Configure agent authentication
+
+1. Select the **‘Settings’** button in the upper right corner of the designer
+
+![](./images/image-33.png)
+
+2. Select **‘Security’** in the left menu and click on **‘Authentication’**
+
+![](./images/image-34.png)
+
+3. For simplicity, we will start with our agent being publicly available. Choose **‘No authentication’** and click **‘Save’**.
+
+![](./images/image-35.png)
+
+4. Close ‘Settings’ clicking cross icon in the upper right corner and select button ‘Publish’ button close to ‘Settings’ one.
+
+![](./images/image-36.png)
+

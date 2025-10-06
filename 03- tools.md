@@ -1,0 +1,125 @@
+﻿# Lab 3: Tools
+
+Under Details, select **Additional Details**.  
+
+
+Select **Yes** to 'Ask the end user before running'.  
+![](././images/tools/Image4.png)
+5. Create a message to display that says:ool.
+
+### Objectives:
+- Create a Tool.
+- Use a Tool.
+
+---
+
+### Task 1: Create a tool
+
+In this task you will learn to create a Tool and continue to build your topic.
+
+1. Select **Tools**. Select **+Add a tool**.  
+
+![](././images/tools/Image1.png)
+
+2. Search for **Dataverse** and select **List rows from selected environment**.  
+![](././images/tools/Image2.png)
+3. Select **Add and configure**.  
+**NOTE** – you may need to select the Dataverse connection again.  
+![](././images/tools/Image3.png)
+4. Under Details, select **Additional Details**.  
+Select **Yes** to ‘Ask the end user before running’.  
+![](./imagesTool/Image4.png)
+5. Create a message to display that says:  
+"Would you like to see everyone else signed up for classes?"  
+
+6. In Inputs, select **Dynamically fill with AI** for Environment.  
+Select **Dynamically fill with best option**.  
+Change the option to **Custom Value**.  
+![](././images/tools/Image5.png)
+7. Select in **Value** and select the correct environment you created for this lab.  
+
+8. Under Table Name, select **Dynamically fill with best option** and change the option to **Custom Value**.  
+
+9. Select in **Value** and select **ClassParticipants**.  
+![](././images/tools/Image6.png)
+10. Select **Completion** and select **Write the response with generative AI**.  
+![](././images/tools/Image10.png)
+11. Select **Save**.  
+![](././images/tools/Image11.png)
+12. Select **Topics** and select the MyLearning topic.  
+![](././images/tools/Image12.png)
+13. Select **+** below the Power Automate tool. Select **Add a tool**, select Tool, select **List rows from selected environment**.  
+![](././images/tools/Image13.png)
+14. Select **Save** to save your agent.  
+![](././images/tools/Image14.png)
+15. Select **Reset** in the Test your agent.  
+![](././images/tools/Image15.png)
+16. At the '**Type your message**' prompt in the **Test agent** pane, type `"Learning"`.  
+17. Follow the agent by answering **yes** and supplying your name and email address.  
+
+18. Select **Connect**.  
+![](././images/tools/Image18.png)
+19. Select **Connect**.  
+![](././images/tools/Image19.png)
+20. Select **Submit**.  
+![](././images/tools/Image20.png)
+21. Select **Save** to save your agent.  
+![](././images/tools/Image21.png)
+22. Select **Reset** in the **Test agent**.  
+![](././images/tools/Image24.png)
+23. At the '**Type your message**' prompt in the **Test agent** pane, type `"Learning"`.  
+
+24. Follow the agent by answering **yes** and supplying your name and email address.  
+
+
+---
+
+## Exercise 3: Call an Action: Connector
+
+### Objectives:
+- Use a Connector.
+
+---
+
+### Task 1: Use a Connector
+
+In this task you will learn to create a connector and continue to build your topic.
+
+1. Click **+** under the Tool that was created in the previous section and select **Add a tool**.  Select **Connector** and search for and select **send an email v2** that is **Office 365 Outlook**.  
+
+![](././images/tools/Image25.png)
+
+2. Select **Submit**.  
+
+3. Select in Inputs. Select Inputs.  
+
+4. In the Inputs select:  
+    - **emailAddress** for the To (String)  
+    - **selectedClass** for the Subject (String)  
+    - **HTML** for the Body (String)  
+![](././images/tools/Image27.png)
+5. Select **Save** to save your agent.  
+![](././images/tools/Image30.png)
+6. Select **Reset** in the **Test agent**.  
+![](././images/tools/Image29.png)
+7. At the '**Type your message**' prompt in the **Test agent** pane, type `"Learning"`.  
+![](././images/tools/Image32.png)
+8. Follow the agent by answering **yes** and supplying your name and email address.  
+
+ 9. Select **Connect**.  
+
+10. Select **Connect**.  
+![](././images/tools/Image31.png)
+11. Select **Reset** in the **Test agent**.  
+![](././images/tools/Image33.png)
+12. At the '**Type your message**' prompt in the **Test agent** pane, type `"Learning"`.  
+![](././images/tools/Image37.png)
+13. Follow the agent by answering yes and supplying your name and email address.  
+![](././images/tools/Image34.png)
+  
+![](././images/tools/Image39.png)
+
+---
+
+Once the agent finishes, select the **App Launcher** and select **Outlook**.  
+![](././images/tools/Image40.png)
