@@ -57,12 +57,12 @@ resource "azurerm_cognitive_deployment" "gpt4o" {
 }
 
 resource "azurerm_cognitive_deployment" "embeddings" {
-  name                 = "text-embedding-3-large"
+  name                 = "text-embedding-ada-002"
   cognitive_account_id = azurerm_ai_services.ai.id
   rai_policy_name      = "Microsoft.Default"
   model {
     format  = "OpenAI"
-    name    = "text-embedding-3-large"
+    name    = "text-embedding-ada-002"
     version = "1"
   }
   sku {
