@@ -270,8 +270,8 @@ You can also review the various **Metrics** of your fine-tuned model.
 2. From the top right **Model** section, chose  Azure AI Foundry models
 
    <ol><img src="../images/aifoundry-import-copilot-studio.png" alt="Screenshot of importing fine tuned model from Foundry" width="600"/></ol>
-3. 
-3. Fill all the required information, using the deployment information of the fine-tuned model, then  **Connect**
+
+3. Fill all the required information, using the deployment information of the fine-tuned model, then **Connect**
 
    <ol><img src="../images/ft-model-details-copilot-studio.png" alt="Screenshot of importing fine tuned model from Foundry" width="600"/></ol>
 4. When you see this confirmation box, then the connection is succeded.
