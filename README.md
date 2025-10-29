@@ -32,7 +32,7 @@ Copilot Studio empowered by Azure is recommended in scenarios when:
 - You have access to thousands of high-quality examples and verified data.
 
 # Learning Path
-**Lab 0: Prerequisites***
+**Lab 0: Prerequisites**
 - [Lab 0.0](labs/0.0-create-an-agent/0.0-create-an-agent.md): Create an agent for testing and monitoring.
 
 **Lab1: Copilot Studio AI Native features**
