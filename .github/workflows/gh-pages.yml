@@ -66,7 +66,7 @@ jobs:
           npm install -D postcss-cli
           npm install -D postcss
           npm install
-          hugo --gc --minify --cleanDestinationDir --baseURL https://didactic-doodle-yvr845e.pages.github.io/
+          hugo --gc --minify --cleanDestinationDir --baseURL https://azure.github.io/Copilot-Studio-and-Azure/
         working-directory: ./docs
 
       - name: Upload artifact

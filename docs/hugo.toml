@@ -107,7 +107,7 @@ version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "didactic-doodle-yvr845e.pages.github.io/"
+url_latest_version = "https://azure.github.io/Copilot-Studio-and-Azure/"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/azure/Copilot-Studio-and-Azure"

@@ -29,7 +29,7 @@ This delivery guide will help you test Copilot Studio and Azure Labs.
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-solid fa-file-lines" title="Read the Docs!" url="https://didactic-doodle-yvr845e.pages.github.io/docs/" %}}
+{{% blocks/feature icon="fa-solid fa-file-lines" title="Read the Docs!" url="https://azure.github.io/Copilot-Studio-and-Azure/docs/" %}}
 Read the delivery guide and learn how to deploy the solution.
 {{% /blocks/feature %}}
 
