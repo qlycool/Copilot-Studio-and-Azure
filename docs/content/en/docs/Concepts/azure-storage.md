@@ -5,7 +5,7 @@ description: >
   Store the documents in Azure Blob Storage.s
 categories: [Azure]
 tags: [docs, storage]
-weight: 3
+weight: 4
 ---
 
 Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that doesn't adhere to a particular data model or definition, such as text or binary data.
@@ -19,6 +19,6 @@ Blob Storage is designed for:
 * Storing data for backup and restore, disaster recovery, and archiving.
 * Storing data for analysis by an on-premises or Azure-hosted service.
 
-**AI Hub** uses Blob Storage to store the documents (PDFs) that will be then vectorized, indexed or analyzed. 
+**Copilot Studio and Azure Labs** uses Blob Storage to store the documents (PDFs) that will be then vectorized, indexed or analyzed. 
 
 Learn more about Azure Blob Storage: [What is Azure Blob Storage?](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview)

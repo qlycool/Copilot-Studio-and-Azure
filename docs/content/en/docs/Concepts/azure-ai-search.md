@@ -5,7 +5,7 @@ description: >
   Used to build a rich search experience over private, heterogeneous content in web, mobile, and enterprise applications.
 categories: [Azure]
 tags: [docs, ai-search]
-weight: 4
+weight: 3
 ---
 
 Azure AI Search (formerly known as "Azure Search") is a cloud search service that gives developers infrastructure, APIs, and tools for building a rich search experience over private, heterogeneous content in web, mobile, and enterprise applications.
@@ -20,7 +20,7 @@ Search is foundational to any app that surfaces text to users, where common scen
 
 ![Imagen arquitectura Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/media/search-what-is-azure-search/azure-search-diagram.svg)
 
-**AI Hub** uses Azure AI Search to serve an index of vectorized content, that will be used by our LLM (ChatGPT) to respond to user's query.
+**Copilot Studio and Azure Labs** uses Azure AI Search to serve an index of vectorized content, that will be used by our LLM (ChatGPT) to respond to user's query.
 
 Learn more at the official documentation: [What is Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search).
 

@@ -14,6 +14,9 @@ title: Copilot Studio and Azure Labs
 <p class="lead mt-5">Copilot Studio and Azure Labs.</p>
 </div>
 
+> **⚠️ Work in Progress**
+>
+> This documentation is currently under development and may contain incomplete or placeholder content. Information provided here is subject to change without notice. Please check back regularly for updates.
 
 
 {{< blocks/link-down color="info" >}}
