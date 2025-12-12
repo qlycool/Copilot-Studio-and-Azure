@@ -4,10 +4,14 @@ description: Copilot Studio and Azure Labs.
 weight: 1
 ---
 
+
+> **⚠️ Work in Progress**
+>
+> This documentation is currently under development and may contain incomplete or placeholder content. Information provided here is subject to change without notice. Please check back regularly for updates.
+
+
 ## Description
 **Copilot Studio and Azure Labs** solution is a new offering that has different delivery modes. You can use it as a presales activity to demonstrate to customer the various Azure Open AI features that are accessible with minimal coding effort or you can deliver it as a Non-technical Hands on. This is intended for executives or other non-technical leads.  The goal is to show different solutions where customers can test and proceed with further steps such as VBD engagements or new AOAI opportunities.
-
-![Copilot Studio and Azure Labs home screenshot](/Copilot-Studio-and-Azure/img/home.jpg)
 
 ## Pre-requisites
 To use this solution, you will need the following:
@@ -31,7 +35,7 @@ By the end of this delivery, you will be able to:
 
 The following diagram shows the high-level architecture of the **Copilot Studio and Azure Labs** solution:
 
-![High-level Architecture](/Copilot-Studio-and-Azure/img/Copilot-Studio-and-Azure-Labs-HLD.png)
+![High-level Architecture](/Copilot-Studio-and-Azure/img/CopilotStudio-with-Azure-HLD.png)
 
 
 ## Delivery Guidance
