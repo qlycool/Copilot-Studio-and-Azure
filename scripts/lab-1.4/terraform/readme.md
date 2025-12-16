@@ -144,7 +144,32 @@ This guide provides step-by-step instructions to deploy Azure AI Search infrastr
 
 ## Installation & Setup
 
-### 1. Authenticate with Azure
+### 1. Clone the Repository and Navigate to Lab Directory
+
+**Open Terminal/Command Prompt:**
+- **Windows**: Press `Win + R`, type `cmd` or `powershell`, and press Enter
+- **macOS**: Press `Cmd + Space`, type `terminal`, and press Enter
+- **Linux**: Press `Ctrl + Alt + T`
+- **VS Code**: Open VS Code and press `Ctrl + ` (backtick) to open integrated terminal
+
+**Clone and navigate to the project:**
+```terminal
+# Clone the repository
+git clone https://github.com/Azure/Copilot-Studio-and-Azure.git
+
+# Navigate to the lab directory
+cd Copilot-Studio-and-Azure/scripts/lab-1.4/terraform
+```
+
+**Verify you're in the correct directory:**
+```terminal
+# List files to confirm you're in the terraform folder
+ls    # On Windows: dir
+```
+
+You should see files like `main.tf`, `variables.tf`, and `outputs.tf`.
+
+### 2. Authenticate with Azure
 
 ```terminal
 # Login to Azure
@@ -157,7 +182,7 @@ az account set --subscription "YOUR_SUBSCRIPTION_ID"
 az account show
 ```
 
-### 2. Initialize Terraform
+### 3. Initialize Terraform
 
 ```terminal
 # Initialize Terraform (downloads required providers)
