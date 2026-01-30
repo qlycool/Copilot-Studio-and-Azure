@@ -553,7 +553,7 @@ Add **Initialize variable** actions for:
 - **Variable:** `vTranscriptText`
 - **Value:** `@{join(body('Select_Phrases'), ' ')} `
 
-![For Each Content](images-samples/for-each-content.png)
+![For Each Content](images-samples/for-each-content.jpg)
 
 ## 6.16 Add Content Check and Final Actions
 
