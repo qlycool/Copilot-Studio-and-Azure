@@ -154,8 +154,8 @@ Add the following fields as an example:
    - **Dimensions:** `3072` (for text-embedding-3-large)
    - **Vector search profile:** `vector-profile`
 
-![Vector Configuration](images-samples/vector-profile.png)
-![Vectorizer](images-samples/vectorizer.png)
+![Vector Configuration](images-samples/vector-profile.jpg)
+![Vectorizer](images-samples/vectorizer.jpg)
 
 4. Click **"Create"**
 
@@ -177,7 +177,7 @@ Add the following fields as an example:
 2. Go to **"Identity"** → **"System assigned"**
 3. Set Status to **"On"** → Click **"Save"**
 
-![Enable Managed Identity](images-samples/sys-identity.png)
+![Enable Managed Identity](images-samples/sys-identity.jpg)
 
 4. Note the **Object ID** for RBAC assignments
 
