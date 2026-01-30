@@ -29,21 +29,21 @@ This enables your Copilot to answer questions based on video content, not just t
 
 ### Required Azure Services
 
-| Service | Purpose | SKU/Tier |
-|---------|---------|----------|
-| Azure Storage Account | Store uploaded videos | Standard LRS |
-| Microsoft Foundry | Content Understanding (video analysis) | S0 Standard |
-| Azure OpenAI | Generate vector embeddings | Standard |
-| Azure AI Search | Index and search content | Basic or Standard |
-| Logic App | Workflow orchestration | Consumption |
-| Event Grid | Event-based triggers | Included with Storage |
+| Service | Purpose |
+|---------|---------|
+| Azure Storage Account | Store uploaded videos |
+| Microsoft Foundry | Content Understanding (video analysis) 
+| Azure OpenAI | Generate vector embeddings | 
+| Azure AI Search | Index and search content |
+| Logic App | Workflow orchestration |
+| Event Grid | Event-based triggers |
 
 ### Model Deployments Required
 
 **In Azure OpenAI:**
 - `text-embedding-3-large` - For generating vector embeddings (3072 dimensions)
 
-**In Azure AI Services (Content Understanding):**
+**In Microsoft Foundry (Content Understanding):**
 - `gpt-4.1` - For video understanding
 - `gpt-4.1-mini` - For summarization
 - `text-embedding-3-large` - For content vectorization
@@ -81,7 +81,6 @@ This enables your Copilot to answer questions based on video content, not just t
    - **Resource group:** `VideoRAG-Project-RG`
    - **Storage account name:** `videoragstorage` (must be globally unique)
    - **Region:** Same as resource group
-   - **Performance:** Standard
 
 
 3. After creation, go to **Containers** → **"+ Container"**
@@ -90,14 +89,20 @@ This enables your Copilot to answer questions based on video content, not just t
 
 ## 2.3 Create Microsoft Foundry for Content Understanding
 
-1. Click **"Create a resource"** → Search for **"Microsoft Foundry "**
-2. Select **"Azure AI services"** 
-3. Configure:
+1. Click **"Create a resource"** → Search for **"Microsoft Foundry"**
+2. Configure:
    - **Resource group:** `VideoRAG-Project-RG`
    - **Region:** Same region (must support Content Understanding)
    - **Name:** `videorag-foundry`
+   - **Default project name:** `videorag-foundry-proj-default`
+
+> **Region Support:** Not all regions support Content Understanding. Check the [Language and region support documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/language-region-support) before selecting your region.
 
 ## 2.4 Create Azure OpenAI Service
+
+> **⚠️ Important:** You must create an Azure OpenAI resource directly in the Azure portal. Azure OpenAI resources (with access to embedding models) that were created in the Microsoft Foundry portal aren't supported for integrated vectorization with AI Search.
+>
+> Reference: [Integrated vectorization documentation](https://learn.microsoft.com/en-us/azure/search/search-how-to-integrated-vectorization?tabs=prepare-data-storage%2Cprepare-model-aoai)
 
 1. Click **"Create a resource"** → Search for **"Azure OpenAI"**
 2. Configure:
@@ -105,10 +110,11 @@ This enables your Copilot to answer questions based on video content, not just t
    - **Name:** `videorag-openai`
 
 
-3. After creation, go to **Azure OpenAI Studio** → **Deployments**
+3. After creation, go to **Azure OpenAI portal** → **Deployments**
 4. Click **"+ Create new deployment"**:
    - **Model:** `text-embedding-3-large`
    - **Deployment name:** `text-embedding-3-large`
+
 
 ## 2.5 Create Azure AI Search
 
@@ -135,7 +141,7 @@ Add the following fields as an example:
 
 
 
-![Index Fields](image-samples/index.png)
+![Index Fields](images-samples/index.png)
 
 ## 3.3 Configure Vector Search
 
@@ -148,8 +154,8 @@ Add the following fields as an example:
    - **Dimensions:** `3072` (for text-embedding-3-large)
    - **Vector search profile:** `vector-profile`
 
-![Vector Configuration](image-samples/vector-profile.png)
-![Vectorizer](image-samples/vectorizer.png)
+![Vector Configuration](images-samples/vector-profile.png)
+![Vectorizer](images-samples/vectorizer.png)
 
 4. Click **"Create"**
 
@@ -171,7 +177,7 @@ Add the following fields as an example:
 2. Go to **"Identity"** → **"System assigned"**
 3. Set Status to **"On"** → Click **"Save"**
 
-![Enable Managed Identity](image-samples/sys-identity.png)
+![Enable Managed Identity](images-samples/sys-identity.png)
 
 4. Note the **Object ID** for RBAC assignments
 
@@ -665,7 +671,7 @@ Once indexed, videos can be searched using:
 
 Example search query for Copilot:
 ```
-"Show me training videos about safety procedures"
+"What are the best ways to use Microsoft Copilot according to training videos?"
 ```
 
 The AI Search index returns matching videos with their source URLs, enabling playback or linking.
@@ -681,7 +687,7 @@ The AI Search index returns matching videos with their source URLs, enabling pla
 - [Logic Apps Managed Identity](https://learn.microsoft.com/azure/logic-apps/create-managed-service-identity)
 - [Azure OpenAI Embeddings](https://learn.microsoft.com/azure/ai-services/openai/concepts/understand-embeddings)
 - [Copilot Studio Connectors](https://learn.microsoft.com/microsoft-copilot-studio/advanced-connectors)
-
+- [Microsoft Foundry Overview](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-foundry)
 ---
 
 ## Additional Links
