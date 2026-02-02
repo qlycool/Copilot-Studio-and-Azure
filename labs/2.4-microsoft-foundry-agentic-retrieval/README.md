@@ -1,4 +1,4 @@
-# 🔍 Fraud Investigation Workshop
+# 2.4 Microsoft Foundry Agentic Retrieval with Foundry IQ
 ## Copilot Studio + Foundry IQ Multi-Source Knowledge Agents
 
 > ⚠️ **EDUCATIONAL USE ONLY**: This workshop is designed for hands-on learning and experimentation. It is **not intended or recommended for production use**. For production deployments, additional security, error handling, monitoring, and enterprise features would be required.
