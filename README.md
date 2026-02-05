@@ -45,6 +45,10 @@ Copilot Studio empowered by Azure is recommended in scenarios when:
 - Deep expertise is required on demand with grounded, cited responses.
 - Complex scenarios require both quick lookups and comprehensive analysis (hybrid responses).
 
+# Architecture
+
+<img width="785" height="545" alt="image" src="https://github.com/user-attachments/assets/350944c5-65cc-4aa4-a3f4-4713b30dc74f" />
+
 # Solutions Accelerators
 
 By leveraging the [Solution Accelerators](docs/Solution-Accelerators.md), we can expand core functionality. In this document, we outline how each accelerator integrates with and enhances Copilot Studio to support these goals:
@@ -52,6 +56,7 @@ By leveraging the [Solution Accelerators](docs/Solution-Accelerators.md), we can
 - Pairing Copilot Studio with [Content Flow](https://github.com/Azure/contentflow) enables high‑accuracy RAG by automating large‑scale document ingestion, intelligent chunking, and multimodal retrieval for enterprise scenarios.
 - [AISearch Flow](/accelerators/aisearch/) enables users to interact with Azure AI Search through a manual button trigger, supporting three main operations: creating an index, uploading documents, and performing semantic search queries.
 - The [Video RAG Accelerator](/accelerators/Video-RAG/) enables intelligent question-and-answer over training videos by automatically extracting video content, transforming it into structured knowledge, and grounding responses in Azure AI Search for use in Copilot Studio.
+
 
 # Learning Path
 **Lab 0: Prerequisites**
