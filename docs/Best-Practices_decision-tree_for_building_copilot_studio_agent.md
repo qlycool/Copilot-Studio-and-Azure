@@ -20,6 +20,88 @@ The lab highlights the **key decisions and best practices for building a Copilot
 - **Feature Availability**: Check that Generative AI orchestration is allowed in your environment (admins can disable it). If disabled, you’ll be limited to classic mode. Also ensure any Premium connectors or Power Automate features you plan to use are licensed, authorized and not blocked by DLPs.
 - **Connections & Permissions**: Verify you have set up connections for any external systems you’ll integrate (e.g. SharePoint, CRM, third-party APIs). The agent will run connectors under either the end user’s credentials or a provided service account – plan authentication accordingly. Ensure all target knowledge sources (SharePoint sites, documents) are accessible to your users, so the agent can retrieve content.
 
+## Copilot Studio Decision Tree
+
+Next you will find a Flowchart representation (**Decision Tree**) about the above the topics that will help you with Key decision steps:
+
+```mermaid
+flowchart TD
+    START([🚀 Start Building Agent]) --> ORCH{1. Orchestration Mode?}
+
+    %% ── Orchestration ──
+    ORCH -->|Recommended| GEN[✅ Generative AI]
+    ORCH -->|Strict control needed| CLASSIC[Classic / Rule-based]
+
+    GEN --> GEN_ACTIONS[Write clear descriptions for<br/>Topics, Tools & Knowledge<br/>Enable auto-prompt for missing info]
+    GEN_ACTIONS --> INFO
+
+    CLASSIC --> CLASSIC_ACTIONS[Define trigger phrases per Topic<br/>Script all tool calls inside Topics]
+    CLASSIC_ACTIONS --> INFO
+
+    %% ── Information Handling ──
+    INFO{2. Information Handling?}
+    INFO --> KS{Knowledge Sources<br/>needed?}
+    INFO --> TOPICS{Topics needed?}
+
+    KS -->|Yes| KS_ADD[Add SharePoint, Docs,<br/>Websites, Dataverse<br/>Provide descriptive names]
+    KS -->|No| TOPICS
+
+    TOPICS -->|Yes| TOPICS_CREATE[Create multi-turn flows<br/>Add input/output variables<br/>Include fallback handling]
+    TOPICS -->|No| TOPICS_SKIP[Rely on Knowledge +<br/>generative answers]
+
+    KS_ADD --> COMBINE[💡 Combine Both for best coverage]
+    TOPICS_CREATE --> COMBINE
+    TOPICS_SKIP --> COMBINE
+    COMBINE --> ENT
+
+    %% ── Entities ──
+    ENT{3. Entities Required?}
+    ENT -->|Yes| ENT_ACTIONS[Prebuilt: Date, Money, Email<br/>Custom: Closed List, Regex<br/>Enable Slot Filling for missing details]
+    ENT -->|No| TOOLS
+    ENT_ACTIONS --> TOOLS
+
+    %% ── External Tools ──
+    TOOLS{4. External Actions<br/>Needed?}
+    TOOLS -->|Yes| TOOLS_ADD[Add Tools]
+    TOOLS -->|No| AUTO
+    TOOLS_ADD --> TOOLS_LIST[Power Platform Connectors<br/>REST API endpoints<br/>Agent Flows — multi-step logic<br/>Power Automate Flows — enterprise<br/>MCP Server — advanced integrations]
+    TOOLS_LIST --> TOOLS_BP[📌 Best Practice:<br/>Clear tool descriptions<br/>for AI orchestration]
+    TOOLS_BP --> AUTO
+
+    %% ── Automation ──
+    AUTO{5. Automation Choice?}
+    AUTO -->|Built-in, no extra licence| AF[Agent Flows]
+    AUTO -->|Reusable, may need licence| PA[Power Automate Flows]
+    AF --> MODEL
+    PA --> MODEL
+
+    %% ── Model Selection ──
+    MODEL{6. AI Model Selection?}
+    MODEL -->|Balanced — most cases| DEFAULT[✅ Default GPT-4.1]
+    MODEL -->|Complex reasoning| DEEP[Deep Reasoning]
+    MODEL -->|Fast, cost-efficient| GENERAL[General / Lightweight]
+    MODEL -->|System decides per query| ADAPTIVE[Auto / Adaptive]
+
+    DEFAULT --> DONE([🎉 Agent Ready — Test & Iterate])
+    DEEP --> DONE
+    GENERAL --> DONE
+    ADAPTIVE --> DONE
+
+    %% ── Styles ──
+    classDef decision fill:#4a90d9,stroke:#2c5f8a,color:#fff,font-weight:bold
+    classDef action fill:#f0f4ff,stroke:#4a90d9,color:#1a1a2e
+    classDef recommended fill:#2ecc71,stroke:#1a9c54,color:#fff,font-weight:bold
+    classDef tip fill:#fff3cd,stroke:#d4a843,color:#1a1a2e
+    classDef endpoint fill:#6c5ce7,stroke:#4834a8,color:#fff,font-weight:bold
+
+    class ORCH,INFO,KS,TOPICS,ENT,TOOLS,AUTO,MODEL decision
+    class GEN_ACTIONS,CLASSIC_ACTIONS,KS_ADD,TOPICS_CREATE,TOPICS_SKIP,ENT_ACTIONS,TOOLS_ADD,TOOLS_LIST action
+    class GEN,DEFAULT recommended
+    class COMBINE,TOOLS_BP tip
+    class START,DONE endpoint
+```
+
+
 ## Key Decisions and Best Practices
 
 ### 1. Choose Orchestration Mode: Generative AI vs Classic
@@ -95,69 +177,6 @@ Finally, choose the AI model that powers your agent’s understanding and langua
 
 *Best Practice*: For most enterprise use cases, start with the Default model which is balanced for mixed workloads. If you notice the agent struggling with complex tasks or being too slow/verbose, you can adjust to a General (faster) model or if not reasoning well enough, try Deep Reasoning.
 
-## Copilot Studio Decision Tree
-
-Next you will find a Flowchart representation (**Decision Tree**) about the above the topics that will help you with Key decision steps:
-
-```
-Start
-  |
-  ├── Orchestration Mode?
-  |       ├── Generative (Recommended)
-  |       |       ├── Why? Flexible, AI-driven, multi-intent handling
-  |       |       ├── Actions:
-  |       |       |       • Write clear descriptions for Topics, Tools, Knowledge
-  |       |       |       • Enable auto-prompt for missing info
-  |       |       └── Best for: FAQs + workflows + dynamic queries
-  |       └── Classic
-  |               ├── Why? Predictable, procedural scenarios
-  |               ├── Actions:
-  |               |       • Define trigger phrases for each Topic
-  |               |       • Script all tool calls inside topics
-  |               └── Best for: Simple, rigid flows
-  |
-  ├── Information Handling?
-  |       ├── Knowledge Sources Needed?
-  |       |       ├── Yes → Add SharePoint, Docs, Websites, Dataverse
-  |       |       |       • Provide descriptive names for each source
-  |       |       |       • Use for FAQs, policies, product info
-  |       |       └── No → Skip to Topics
-  |       ├── Topics Needed?
-  |       |       ├── Yes → Create multi-turn flows for tasks
-  |       |       |       • Add input/output variables
-  |       |       |       • Include fallback handling
-  |       |       └── No → Rely on knowledge + generative answers
-  |       └── Combine Both for best coverage
-  |
-  ├── Entities Required?
-  |       ├── Yes
-  |       |       • Use Prebuilt (Date, Money, Email) for common data
-  |       |       • Create Custom (Closed list, Regex) for domain-specific info
-  |       |       • Enable Slot Filling for missing details
-  |       └── No → Continue
-  |
-  ├── External Actions Needed?
-  |       ├── Yes → Add Tools
-  |       |       • Connectors (Office 365, Dynamics, Teams)
-  |       |       • REST API for custom endpoints
-  |       |       • Agent Flows for multi-step logic
-  |       |       • Power Automate Flows for enterprise workflows
-  |       |       • MCP Server for advanced integrations
-  |       |       • Best Practice: Clear tool descriptions for AI orchestration
-  |       └── No → Continue
-  |
-  ├── Automation Choice?
-  |       ├── Agent Flows → Built-in, quick logic, no extra licence
-  |       └── Power Automate → External, reusable, may need licence
-  |
-  └── AI Model Selection?
-          ├── Default → Balanced for most cases
-          ├── Deep → Complex reasoning, multi-step tasks
-          ├── General → Fast, cost-efficient for simple Q&A
-          └── Auto → Adaptive per query
-End
-
-```
 
 ## Summary
 
@@ -166,6 +185,7 @@ Building a Copilot Studio agent involves balancing structured design (topics, fl
 *Tip*: Start simple and add complexity as needed: for a basic Q&A bot, you might only need generative mode with a few knowledge sources and minimal topics; for a complex workflow assistant, you’ll design topics and integrate multiple tools. Always keep the user’s experience in mind – clarity, correctness, and convenience. 
 
 By leveraging the rich capabilities of Copilot Studio following the best practices above, you can implement a successful Copilot agent that truly augments your users’ abilities. Happy building
+
 
 
 
