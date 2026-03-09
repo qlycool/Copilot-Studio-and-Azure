@@ -8,6 +8,8 @@ Project Name: [To be defined]
 Business Area / Department: [e.g., HR, Finance, Sales, Operations]
 Project Owner: [Name / Role]
 Primary Goal: Describe in 2–3 sentences what the Copilot agent is expected to achieve.
+
+
 SUGGESTED PROMPT "You are an expert in Microsoft Copilot Studio and enterprise solution design. Your task is to write the “Primary Goal” section of a Functional Project Document. I will provide: - The project name - The business area or department - What the Copilot agent should roughly do (bullet points) Using that input, generate a concise 2–3 sentence description that: 
 - Clearly states the main objective of the Copilot agent 
 - Focuses on measurable business value 
@@ -21,9 +23,11 @@ SUGGESTED PROMPT "You are an expert in Microsoft Copilot Studio and enterprise s
 Problem Statement: Clearly describe the current challenge or inefficiency.
 Target Users: Internal employees, customer support agents, customers, partners
 Key Use Cases:
-- Use Case #1
-- Use Case #2
- SUGGESTED PROMPT "You are a senior solution architect specialized in Microsoft Copilot Studio. Your task is to write the full “Business Problem & Use Case” section of a Functional Project Document. 
+- Use Case #1.
+- Use Case #2.
+  
+SUGGESTED PROMPT:
+"You are a senior solution architect specialized in Microsoft Copilot Studio. Your task is to write the full “Business Problem & Use Case” section of a Functional Project Document. 
 I will provide: 
 - The problem or current inefficiency (bullet points) 
 - The target users (e.g., internal employees, customer support agents, customers, partners) 
@@ -44,8 +48,8 @@ Target Users:
 Key Use Cases: 
 1. <Expanded Use Case #1> 
 2. <Expanded Use Case #2> 
-3. <Any additional provided> Wait for my input.
-"
+3. <Any additional provided> Wait for my input."
+   
 3. Expected Outcomes & KPIs
  
 Success Criteria:
@@ -54,10 +58,10 @@ Success Criteria:
 KPIs:
 - Resolution rate
 - Escalation rate
-- Time saved
-Perfect, Pablo — here is a clean, “copy‑safe” prompt for the next section:
-SUGGESTED PROMPT " 
-You are a senior solution architect specialized in Microsoft Copilot Studio. 
+- Time saved··
+
+SUGGESTED PROMPT: 
+" You are a senior solution architect specialized in Microsoft Copilot Studio. 
 Your task is to write the full “Expected Outcomes & KPIs” section of a Functional Project Document.
 I will provide:
 - The high-level success criteria (bullet points)
@@ -91,7 +95,8 @@ Primary Channels:
 - Web chat
 Conversation Style: Guided or conversational
 
-SUGGESTED PROMPT " You are a senior solution architect specialized in Microsoft Copilot Studio. Your task is to write the full “User Experience & Channels” section of a Functional Project Document. I will provide: 
+SUGGESTED PROMPT 
+" You are a senior solution architect specialized in Microsoft Copilot Studio. Your task is to write the full “User Experience & Channels” section of a Functional Project Document. I will provide: 
 - The primary channels where the Copilot agent will be available 
 - The preferred conversation style (guided, conversational, hybrid, etc.) 
 Your job is to: 
@@ -117,8 +122,11 @@ Core Capabilities:
 - Collect structured input
 Exception Handling:
 - Escalation to humans
-- Logging 
-SUGGESTED PROMPT "You are a senior solution architect specialized in Microsoft Copilot Studio.
+- Logging
+
+  
+SUGGESTED PROMPT
+"You are a senior solution architect specialized in Microsoft Copilot Studio.
 Your task is to write the full “Functional Requirements” section of a Functional Project Document.
 I will provide:
 - The core capabilities the Copilot agent must support (bullet points)
@@ -142,14 +150,17 @@ Core Capabilities:
 Exception Handling:
 - <Expanded exception handling requirement 1>
 - <Expanded exception handling requirement 2>
-- (more if provided)
-"
+- (more if provided)"
+  
 6. Automation & Integration
 
 Power Automate
 RPA if required
 Integrations with Microsoft 365, Dataverse, SaaS, APIs
-SUGGESTED PROMPT "You are a senior solution architect specialized in Microsoft Copilot Studio.
+
+
+SUGGESTED PROMPT 
+"You are a senior solution architect specialized in Microsoft Copilot Studio.
 Your task is to write the full “Automation & Integration” section of a Functional Project Document.
 I will provide:
 - The automation components needed (e.g., Power Automate, RPA)
@@ -174,8 +185,8 @@ Integrations:
 - <Microsoft 365 integration: expanded functional description>
 - <Dataverse integration: expanded functional description>
 - <SaaS integrations: expanded functional description>
-- <API integrations: expanded functional description>
-"
+- <API integrations: expanded functional description>"
+  
 7. AI & Knowledge Sources
 
 SharePoint, OneDrive, Websites, Dataverse
@@ -197,7 +208,9 @@ Versioning and rollback
  
 Data quality
 External dependencies
- SUGGESTED PROMPT "You are a senior solution architect specialized in Microsoft Copilot Studio.
+
+
+SUGGESTED PROMPT "You are a senior solution architect specialized in Microsoft Copilot Studio.
 Your task is to write the full “Risks & Constraints” section of a Functional Project Document.
 I will provide:
 - Key risks (bullet points)
@@ -221,8 +234,8 @@ Risks:
 Constraints:
 - <Expanded constraint 1>
 - <Expanded constraint 2>
-- (more if provided)
-"
+- (more if provided)"
+  
 11. Recommended Architecture
  
 Copilot Studio
@@ -236,9 +249,8 @@ Confirm integrations
 Build MVP
 Deploy to production
 
-─────────────────────────────────────────────────────────────
- AI SCOPING AGENT
-─────────────────────────────────────────────────────────────
+
+# AI SCOPING AGENT
 
 Use the Copilot Studio Scoping Agent to technically validate your project idea. The agent is connected to Microsoft Copilot Studio documentation and helps you confirm what is natively supported, what requires Azure AI services, and where potential blockers may exist.
 
