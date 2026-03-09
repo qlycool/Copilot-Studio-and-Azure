@@ -56,7 +56,11 @@ By leveraging the [Solution Accelerators](docs/Solution-Accelerators.md), we can
 - Pairing Copilot Studio with [Content Flow](https://github.com/Azure/contentflow) enables high‑accuracy RAG by automating large‑scale document ingestion, intelligent chunking, and multimodal retrieval for enterprise scenarios.
 - [AISearch Flow](/accelerators/aisearch/) enables users to interact with Azure AI Search through a manual button trigger, supporting three main operations: creating an index, uploading documents, and performing semantic search queries.
 - The [Video RAG Accelerator](/accelerators/Video-RAG/) enables intelligent question-and-answer over training videos by automatically extracting video content, transforming it into structured knowledge, and grounding responses in Azure AI Search for use in Copilot Studio.
+  
+# Project Kickoff
 
+- [Best Practices](docs/Best-Practices_decision-tree_for_building_copilot_studio_agent.md): Decision tree and best practices to build an agent.
+- [Funtional Scoping](docs/Best-Practices_decision-tree_for_building_copilot_studio_agent.md): Essential project template with AI‑guided prompts and an AI‑empowered scoping agent to accelerate fast, consistent technical scoping.
 
 # Learning Path
 **Lab 0: Prerequisites**
@@ -77,8 +81,7 @@ By leveraging the [Solution Accelerators](docs/Solution-Accelerators.md), we can
 - [Lab 2.3](labs/2.3-ai-search-sharepoint-indexer/2.3-ai-search-sharepoint-indexer.md): AI search Sharepoint Indexer.
 - [Lab 2.4](labs/2.4-microsoft-foundry-agentic-retrieval/README.md): Microsoft Foundry Agentic Retrieval with Foundry IQ.
 
-**Best Practices**
-- [Best Practices](docs/Best-Practices_decision-tree_for_building_copilot_studio_agent.md): Decision tree and best practices to build an agent. 
+
 
   
 # Usage scenarios
