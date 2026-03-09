@@ -235,3 +235,41 @@ Validate scope
 Confirm integrations
 Build MVP
 Deploy to production
+
+─────────────────────────────────────────────────────────────
+ AI SCOPING AGENT
+─────────────────────────────────────────────────────────────
+
+Use the Copilot Studio Scoping Agent to technically validate your project idea. The agent is connected to Microsoft Copilot Studio documentation and helps you confirm what is natively supported, what requires Azure AI services, and where potential blockers may exist.
+
+  Access the agent here:
+  https://huggingface.co/spaces/saadmsft/copilot-studio-scoping-agent
+
+How to use it:
+
+  Step 1 – Describe your project
+    Share the use case, the business challenge, and the target users
+    in plain language. No technical detail required at this stage.
+    Example: "We want an agent for HR that answers policy questions
+    from employees via Microsoft Teams."
+
+  Step 2 – Ask technical questions
+    Query specific capabilities you plan to use, for example:
+    - "Can Copilot Studio connect to SharePoint as a knowledge source?"
+    - "Does it support voice channel with Azure Communication Services?"
+    - "Can I fine-tune the underlying model for my domain?"
+    - "What authentication options are available for external users?"
+
+  Step 3 – Validate feasibility
+    Get grounded, documentation-backed answers on what Copilot Studio
+    handles natively versus what requires Azure AI Search, Azure OpenAI,
+    or custom connectors. Use these answers to make architecture decisions
+    before committing to a direction.
+
+  Step 4 – Document the outcomes
+    Transfer the validated findings into the relevant sections above
+    (Functional Requirements, AI & Knowledge Sources, Recommended
+    Architecture, etc.) to build a well-scoped, technically accurate
+    project specification.
+
+─────────────────────────────────────────────────────────────
